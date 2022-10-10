@@ -29,60 +29,66 @@ class _HomeState extends State<Home> {
         ],
       ),
       backgroundColor: Colors.white,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Icon(
-            Icons.person_outline_rounded,
-            size: 120,
-            color: Colors.green,
-          ),
-          TextField(
-            keyboardType: TextInputType.number,
-            decoration: InputDecoration(
-              labelText: 'Peso(KG)',
-              labelStyle: TextStyle(color: Colors.green),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Icon(
+              Icons.person_outline_rounded,
+              size: 120,
+              color: Colors.green,
             ),
-            textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.green, fontSize: 25),
-          ),
-          TextField(
-            keyboardType: TextInputType.number,
-            decoration: InputDecoration(
-              labelText: 'Altura(cm)',
-              labelStyle: TextStyle(color: Colors.green),
-            ),
-            textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.green, fontSize: 25),
-          ),
-          SizedBox(
-            width: 50,
-          ),
-          Container(
-            height: 50,
-            child: ElevatedButton(
-              onPressed: () {},
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.green),
+            TextField(
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: 'Peso(KG)',
+                labelStyle: TextStyle(color: Colors.green),
               ),
-              child: Text(
-                'Calcular',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 25,
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.green, fontSize: 25),
+            ),
+            TextField(
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: 'Altura(cm)',
+                labelStyle: TextStyle(color: Colors.green),
+              ),
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.green, fontSize: 25),
+            ),
+            SizedBox(
+              width: 50,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+              child: Container(
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.green),
+                  ),
+                  child: Text(
+                    'Calcular',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                    ),
+                  ),
                 ),
               ),
             ),
-          ),
-          Text(
-            'Info',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.green,
-              fontSize: 25,
-            ),
-          )
-        ],
+            Text(
+              'Info',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.green,
+                fontSize: 25,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
